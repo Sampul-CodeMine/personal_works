@@ -11,33 +11,34 @@
 
 void display_result(double fnum, char chr, double snum, double result)
 {
-    char *ops;
+	char *ops;
 
-    system("clear");
-
-    switch (chr)
-    {
-    case '+':
-        ops = "Addition";
-        printf("%s:\n%.2lf %c %.2lf = %.2lf\n",ops, fnum, chr, snum, result);
-        break;
-    case '-':
-        ops = "Subtraction";
-        printf("%s:\n%.2lf %c %.2lf = %.2lf\n",ops, fnum, chr, snum, result);
-        break;
-    case '*':
-        ops = "Multiplication";
-        printf("%s:\n%.2lf %c %.2lf = %.2lf\n",ops, fnum, chr, snum, result);
-        break;
-    case '/':
-        ops = "Division";
-        printf("%s:\n%.2lf %c %.2lf = %.2lf\n",ops, fnum, chr, snum, result);
-        break;
-    case '%':
-        ops = "Remainder Division";
-        printf("%s:\n%.2lf %c %.2lf = %.1lf\n",ops, fnum, chr, snum, result);
-        break;
-    default:
-        ops = "Error";
-    }
+	system("clear");
+	switch (chr)
+	{
+	case '+':
+		ops = "Addition";
+		printf("%s:\n%.2lf %c %.2lf = %.2lf\n", ops, fnum, chr, snum, result);
+		break;
+	case '-':
+		ops = "Subtraction";
+		printf("%s:\n%.2lf %c %.2lf = %.2lf\n", ops, fnum, chr, snum, result);
+		break;
+	case '*':
+		ops = "Multiplication";
+		printf("%s:\n%.2lf %c %.2lf = %.2lf\n", ops, fnum, chr, snum, result);
+		break;
+	case '/':
+		ops = "Division";
+		printf("%s:\n%.2lf %c %.2lf = %.2lf\n", ops, fnum, chr, snum, result);
+		break;
+	case '%':
+		ops = "Remainder Division";
+		printf("%s:\n%.2lf %c %.2lf = %.2lf\n", ops, fnum, chr, snum, result);
+		break;
+	default:
+		ops = "Error";
+		printf("%s:\n", ops);
+		break;
+	}
 }

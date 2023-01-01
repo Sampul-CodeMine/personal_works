@@ -1,29 +1,25 @@
 #include "mathoperations.h"
 
-typedef struct Calculator {
-    double first_number;
-    double second_number;
-    char math_operator;
-    double result;
-} mathematics;
+/**
+  * main - Entry point
+  * Return: Always 0 (Success)
+  */
 
-int main (void)
+int main(void)
 {
-    mathematics math;
-    char reply = 'y';
-    char *question = "\nDo you wish to continue with another calculation? (y/n) : ";
+	math cal;
+	char reply = 'y';
+	char *qtn = "\nDo you wish to continue with another calculation? (y/n) : ";
 
-    do
-    {
-        math.first_number = accept_num_input();
-        math.math_operator = accept_operator();
-        math.second_number = accept_num_input();
-        math.result = solve_maths(math.first_number, math.math_operator, math.second_number);
-        display_result(math.first_number, math.math_operator, math.second_number, math.result);
+	do {
+		cal.f_n = accept_num_input();
+		cal.math_opr = accept_operator();
+		cal.s_n = accept_num_input();
+		cal.result = solve_maths(cal.f_n, cal.math_opr, cal.s_n);
+		display_result(cal.f_n, cal.math_opr, cal.s_n, cal.result);
+		printf("%s", qtn);
+		scanf("%s", &reply);
+	} while (reply == 'y' || reply == 'Y');
 
-        printf("%s", question);
-        scanf("%s", &reply);
-    } while (reply == 'y' || reply == 'Y');
-
-    return (0);
+	return (0);
 }
