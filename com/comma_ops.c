@@ -5,7 +5,8 @@ int main(void)
 	int a;
 	int n1 = 8, n2, getter;
 
-	a = (printf("Dukeson: "), 2, 3);
+	/* a = (printf("Dukeson: "), 2, 3); */
+	a = (printf("Dukeson: "),3);
 	printf("The value of a = %d\n", a);
 	printf("\n");
 

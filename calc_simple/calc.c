@@ -1,5 +1,4 @@
 #include <stdio.h>
-#include <conio.h>
 #include <stdlib.h>
 
 int add(int a, int b)
@@ -37,7 +36,7 @@ int get_input(char *str)
         return (-1);
 }
 
-char get_operator()
+char get_operator(void)
 {        
         char *prompt = "1\t[Addition]\n2\t[Subtraction]\n3\t[Multiplication]\n4\t[Division]\n";
         int ops;
@@ -79,7 +78,7 @@ void perform_calc(int a, int b, char ops)
                 printf("\n%d %c %d = %d\n", a, ops, b, multiply(a, b));
                 break;
         case '/':
-                printf("\n%d %c %d = %d\n", a, ops, b, divide(a, b));
+                printf("\n%d %c %d = %.2f\n", a, ops, b, divide(a, b));
                 break;
         default:
                 printf("Invalid mathematical operation.\n");
@@ -88,8 +87,7 @@ void perform_calc(int a, int b, char ops)
 
 int main(void)
 {
-        int first = 0, second = 9;
-        int result = 0;
+        int first = 0, second = 0;
         char ops;
 
         ops = get_operator();
